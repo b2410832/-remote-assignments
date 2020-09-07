@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+}
+
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-words {
+    margin-left: 30px;
+    font-weight: normal;
+}
+
+.header {
+    background-color: rgb(235, 235, 235);
+}
+
+.menu-items {
+    list-style-type: none;
+    margin: 1.5rem;
+}
+
+.menu-items li {
+    display: inline;
+    padding: 0 2rem;
+}
+
+.burger {
+    width: 50px;
+    height: 40px;
+    margin: 10px 50px;
+    display: none;
+}
+
+/* welcome */
+.welcome {
+    background-color: rgb(201,221,239);
+    text-align: center;
+    padding: 5rem;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+/* sections */
+.section-title{
+    text-align: center;
+    margin: 2rem;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box {
+    box-sizing: border-box;
+    background-color: rgb(133,153,171);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    height: 150px;
+    width: 580px;
+}
+
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    border: none;
+    background-color:rgb(218,238,255);
+    padding: 15px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: medium;
+    cursor: pointer;
+}
+
+/* 螢幕小於等於1200px時套用 */
+@media (max-width: 1200px){
+    .box {
+        width: 45%;
+    }
+}
+
+/* 螢幕小於等於800px時套用 */
+@media (max-width: 800px){
+    .menu {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+
+    
+}
+
+/* 螢幕小於等於500px時套用 */
+@media (max-width: 500px){
+    .box {
+        width: 90%;
+    }
+    .welcome {
+        font-size: x-large;
+    }
+    .section-title {
+        font-size: larger;
+    }
+}
+
+
+
