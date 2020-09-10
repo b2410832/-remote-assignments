@@ -83,7 +83,7 @@ a {
 ========================== */
 
 /*  螢幕大於500px時套用  */
-@media (min-width: 500px) {
+@media (min-width: 501px) {
     .wrapper {
         width: 95%;
     }
@@ -105,7 +105,7 @@ a {
     }
 }
 /*  螢幕大於800px時套用  */
-@media (min-width: 800px) {
+@media (min-width: 801px) {
     .burger-icon {
         display: none;
     }
@@ -122,7 +122,7 @@ a {
 }
 
 /*  螢幕大於1200px時套用  */
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
     .menu-list {
         width: 30%;
     }
