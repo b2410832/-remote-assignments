@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Open+Sans&display=swap');
+
+/* ========================== 
+            Global
+============================= */
+* {
+    box-sizing: border-box;
+}
+
+body, p {
+    font: 400 16px/24px Roboto,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+    color: #202124;
+}
+
+h1,
+h2 {
+    font: 400 24px/32px Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+}
+
+h3 {
+    font: 300 34px/40px Roboto,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+}
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #202124;
+    line-height: 0;
+    display: inline-block;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+/* ========================== 
+        Components 
+============================= */
+.card-group {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card {
+    border: 1px solid #dadce0;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title {
+    color: #1a73e8;
+}
+
+.card-title h3 {
+    font: 400 24px/32px Roboto,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+    margin: 0 0 24px 0;
+}
+
+.card-body {
+    padding: 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-description {
+    font: 400 16px/24px Roboto,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+    height: 100%;
+}
+
+.card-btn {
+    padding-top: 16px;
+    margin-top: auto;
+    transition: .2s;
+}
+
+.btn {
+    border-radius: 4px;
+    font: 500 14px/36px Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+    padding: 0 24px;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn-primary {
+    background-color: #1a73e8;
+    color: #fff;
+    border: 1px solid #d2e3fc;
+    transition: .2s;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 1px 2px 0 
+    rgba(60,64,67,0.3),0 1px 3px 1px 
+    rgba(60,64,67,0.15);
+}
+
+.btn-light {
+    background-color: #fff;
+    color: #1a73e8;
+    border: 1px solid #dadce0;
+    transition: .2s;
+}
+
+.btn-light--noborder {
+    background-color: #fff;
+    color: #1a73e8;
+    border: none;
+    padding: 0 8px;
+    margin: 0 4px;
+    transition: .2s;
+}
+
+.btn-light:hover, .btn-light--noborder:hover {
+    background-color: #e8f0fe;
+}
+
+.btn-languange {
+    background-color: #fff;
+    color: #202124;
+    border: 1px solid #dbdada;
+    padding: 0 31px 0 15px;
+    background-image: url(./images/triangle-down.svg);
+    background-repeat: no-repeat;
+    background-position: 85% 50%;
+    background-size: 10px 10px;
+    transition: .2s;
+}
+
+.btn-languange:hover {
+    background-color: #f0f0f0;
+}
+
+/* .btn-languange::after {
+    content: url(./images/triangle-down.svg);
+} */
+
+.border-bottom {
+    border-bottom: 1px solid #dbdada;
+}
+
+/* ========================== 
+            Base 
+============================= */
+
+/* === header === */
+.header {
+    height: 48px;
+    width: 100%;
+    padding: 0px 16px;
+    box-shadow: 0 1px 10px 2px
+    rgba(60,64,67,0.3),0 1px 3px 1px 
+    rgba(60,64,67,0.15);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+
+.header-menu--icon {
+    width: 34px;
+    border:none;
+    border-radius: 50%;
+    background-color: #fff;
+    height: 100%;
+    transition: .2s;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 12px;
+}
+
+.header-menu--icon:hover {
+    background-color: #f0f0f0;
+}
+
+.header-logo {
+    margin: 8px 0 6px;
+}
+
+.header-search {
+    margin-left: auto;
+}
+
+.header-search::before {
+    content: url('./images/search.svg');
+}
+
+.header-profile {
+    padding-top: 4px;
+    padding-left: 4px;
+}
+
+.header-profile img{
+    clip-path: circle(50% at 50% 50%);
+    margin-left: 16px;
+}
+
+
+/* === announcement === */
+.announcement {
+    background-color: #202124;
+    padding: 64px 16px 16px;
+    color: #fff;
+    font-size: 14px;
+}
+.announcement a {
+    text-decoration: underline;
+    color: #fff;
+    font-weight: 500;
+}
+/* === banner === */
+.banner {
+    background-color: #f0f0f0;
+    padding: 0 16px;
+}
+.banner-img {
+    margin: 0;
+    padding: 30px 0;
+}
+.banner-description {
+    padding: 40px 0;
+}
+.banner-title {
+    margin: 0 0 24px 0;
+    color: #1a73e8;
+}
+.banner-title a{
+    color: #1a73e8;
+}
+.banner-title h3 {
+    font: 400 24px/32px Roboto,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+    margin: 0;
+}
+.banner-content p{
+    font: 400 16px/24px Roboto,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+}
+.banner-btn {
+    padding-top: 22px;
+}
+
+/* === products === */
+.products {
+    text-align: center;
+    padding-top: 16px;
+}
+
+.products-title h2{
+    margin: 0;
+}
+
+.products-group {
+    margin-top: 32px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.product {
+    width: 50%;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.product-img {
+    margin: 0;
+    padding: 16px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-name {
+    margin: 0;
+}
+
+.products-btn {
+    margin: 60px 0;
+}
+/* === programs === */
+.programs-card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.programs-card {
+    width: 100%;
+}
+
+.programs-card-img {
+    position: relative;
+}
+
+.programs-card-img::before {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    content: '';
+    display: block;
+    height: 160px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px;
+}
+
+.events-img::before {
+    background-image: url(./images/events-graphic.png);
+}
+
+
+.community-img::before {
+    background-image: url(./images/community-graphic.png);
+}
+
+/* === news === */
+.news {
+    background-color: #f0f0f0;
+    padding: 16px 0;
+}
+
+.news-card-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news-card {
+    width: 100%;
+}
+
+.news-title {
+    text-align: center;
+    margin: 0;
+}
+
+.news-card-media {
+    height: 200px;
+}
+
+.news-card-media img {
+    width: 128px;
+    max-height: 128px;
+}
+
+.news-card-btn {
+    margin: 0 0 -4px -12px;
+}
+
+
+/* === linkboxes === */
+.linkboxes-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.linkboxes-group a{
+    color: #202124;
+}
+
+.linkbox {
+    padding-top: 12px; 
+    padding-bottom: 24px; 
+}
+
+.linkbox-title {
+    font: 400 16px/26px Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+    margin: 1px 0 4px;
+}
+
+.linkbox-item {
+    padding: 4px 0;
+    font-size: 14px;
+}
+
+.linkbox-item a:hover {
+    color: #1a73e8;
+}
+/* === sites === */
+.sites-list {
+    display: flex;
+    flex-direction: column;
+}
+.sites-item {
+    flex-grow: 1;
+}
+
+/* === utility === */
+.utility {
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.terms, .privacy {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.privacy::before {
+    content: "|";
+    margin-right: 8px;
+}
+.subscription-btn {
+    margin-left: 16px;
+}
+.subscription span {
+    text-align: end;
+}
+
+
+
+/* ========================== 
+        Media Queries 
+============================= */
+
+@media (min-width: 601px) {
+    .banner {
+        padding: 0 24px;
+    }
+    .announcement{
+        text-align: center;
+        padding: 68px 0 20px;
+    }
+    .banner-img {
+        max-width: 512px;
+        margin: auto;
+    }
+    .banner-title h3, .news-title {
+        font-size: 34px;
+        line-height: 40px;
+    }
+    .products-title h2 {
+        font-size: 30px;
+    }
+    .products {
+        padding: 24px 0;
+    }
+    .product {
+        width: 25%;
+    }
+    .programs-card {
+        width: 48%;
+    }
+    .card {
+        margin-bottom: 24px;
+    }
+    .news-card {
+        width: 48%;
+    }
+    .linkboxes-group {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .linkbox {
+        flex-grow: 1;
+    }
+    .sites-list {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .utility {
+        flex-direction: row;
+        align-items: center;
+    }
+    .utility-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+
+    }
+    .subscription {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 16px;
+    }
+
+}
+
+@media (min-width: 841px) {
+    .banner {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+    }
+    .banner-description, .banner-img {
+        margin-right: 24px;
+        flex-grow: 1;
+    }
+    .products {
+        padding: 40px 0;
+    }
+    .news-card {
+        max-width: 23%;
+        margin-right: 8px;
+        overflow-wrap: break-word;
+    }
+    .news-card-media img{
+        width: 96px;
+    }
+    .sites {
+        display: flex;
+        align-items: center;
+    }
+    .sites-logo, .sites-list {
+        flex-grow: 1;
+    }
+}
+
+@media (min-width: 1201px) {
+    .banner-description, .banner-img {
+        margin-right: 90px;
+    }
+}
+
+@media (max-width: 1252px) {
+
+}
+@media (max-width: 1200px) {
+    
+}
+@media (max-width: 1049x) {
+    
+}
+@media (max-width: 1000px) {
+    
+}
+@media (max-width: 840px) {
+    
+}
+@media (max-width: 600px) {
+    
+}
