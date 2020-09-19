@@ -59,7 +59,6 @@
         const burgerBtn = document.querySelector('.burger-icon button');
         const closeBtn = document.querySelector('.close-icon');
         const menuList = document.querySelector('.menu-list');
-        const menuItem = document.querySelectorAll('.menu-item');
 
         // Click to change banner text
         banner.addEventListener('click', (event) => {
@@ -75,6 +74,10 @@
             menuList.classList.toggle('active');
         });
         
+        // Click to Show More Content Boxes
+        btn.addEventListener('click', () => {
+            boxesGroup2.style.display = 'flex';
+        });
     </script>
 </body>
 </html>
