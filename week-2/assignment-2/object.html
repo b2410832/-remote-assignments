@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        function calculate(args){
+            let result;
+            if(args.op==="+") {
+                result=args.n1+args.n2;
+            } else if(args.op==="-") {
+                result=args.n1-args.n2;
+            } else {
+                result="Not supported";
+            }
+            return result;
+        }
+
+        // 第一種方法：object literal
+        let arg1 = {
+            op: '+',
+            n1: 3,
+            n2: 4
+        }
+        calculate(arg1);
+
+        // 第二種方法：function constructor
+        function MathObject2(op, n1, n2) {
+            this.op = op;
+            this.n1 = n1;
+            this.n2 = n2;
+        }
+        let arg2 = new MathObject2('+', 3, 4);
+        calculate(arg2);
+
+        // 第三種方法：class
+        class MathObject3 {
+            constructor(op, n1, n2) {
+                this.op = op;
+                this.n1 = n1;
+                this.n2 = n2;
+            }
+        }
+        let arg3 = new MathObject3('+', 3, 4);
+        calculate(arg3);
+    </script>
+</body>
+</html>

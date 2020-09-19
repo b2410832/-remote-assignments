@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm</title>
+</head>
+<body>
+    <script>
+        // 寫出一個函式，找出nums中加起來剛好會是target的兩個數字，回傳這兩個數字在陣列中的index
+        function twoSum(nums, target){
+            for(let i = 0; i < nums.length-1; i++) {
+                for(let j = 1; j < nums.length; j++) {
+                    let sum = nums[i] + nums[j]
+                    if(sum === target) {
+                        return [i, j]; 
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
