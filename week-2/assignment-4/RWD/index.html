@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <title>RWD layout</title>
+</head>
+<body>
+    <!-- navbar start -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="#">Website Title / Logo</a>
+        </div>
+        <div class="burger-icon">
+            <button>
+                <img src="./icon_menu.png" alt="" width="45px" height="40px">
+            </button>
+        </div>
+        <ul class="menu-list">
+            <li class="close-icon"><a href="#">&times;</a></li>
+            <li class="menu-item"><a href="#">Item 1</a></li>
+            <li class="menu-item"><a href="#">Item 2</a></li>
+            <li class="menu-item"><a href="#">Item 3</a></li>
+            <li class="menu-item"><a href="#">Item 4</a></li>
+        </ul>
+    </header>
+    <!-- navbar end -->
+    <!-- banner start -->
+    <div class="banner">
+        <h1>Welcome Message</h1>
+    </div>
+    <!-- banner end -->
+    <!-- section start -->
+    <section class="section">
+        <div class="wrapper">
+            <h2>Section Title</h2>
+            <div class="boxes-group">
+                <div class="box">Content Box 1</div>
+                <div class="box">Content Box 2</div>
+                <div class="box">Content Box 3</div>
+                <div class="box">Content Box 4</div>
+            </div>
+            <button class="btn">Call to Action</button>
+            <div class="boxes-group" id="boxes-group--2">
+                <div class="box">Content Box 1</div>
+                <div class="box">Content Box 2</div>
+                <div class="box">Content Box 3</div>
+                <div class="box">Content Box 4</div>
+            </div>
+        </div>
+    </section>
+    <!-- section end -->
+    <script>
+        const banner = document.querySelector('.banner');
+        const btn = document.querySelector('.btn');
+        const boxesGroup2 = document.querySelector('#boxes-group--2');
+        const burgerBtn = document.querySelector('.burger-icon button');
+        const closeBtn = document.querySelector('.close-icon');
+        const menuList = document.querySelector('.menu-list');
+        const menuItem = document.querySelectorAll('.menu-item');
+
+        // Click to change banner text
+        banner.addEventListener('click', (event) => {
+            let h2 = event.target.firstElementChild;
+            h2.textContent = "Have a Good Time!";
+        });
+
+        // Click to Show/Close menu
+        burgerBtn.addEventListener('click', () => {
+            menuList.classList.toggle('active');
+        });
+        closeBtn.addEventListener('click', () => {
+            menuList.classList.toggle('active');
+        });
+        
+    </script>
+</body>
+</html>
