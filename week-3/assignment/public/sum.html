@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AJAX</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Sum</title>
 </head>
 <body>
-    <h1>Welcome to Sum Calculator!</h1>
-    <p>1+2+3+...+n = ?</p>
-    <form action="/getData" method="GET" id="form">
-        <label for="number">n =</label>
-        <input type="text" name="number" id="input">
-        <button type="submit">Calculate</button>
-    </form>
-    <div id="answer">
+    <div class="wrapper">
+        <h1>Welcome to Sum Calculator!</h1>
+        <div class="card">
+            <h3>1+2+3+...+n = ?</h3>
+            <form action="/getData" method="GET" id="form">
+                <label for="number">請輸入一個正整數(n) = </label>
+                <input type="text" name="number" id="input">
+                <button type="submit">Calculate</button>
+            </form>
+            <div id="answer">
+            </div>
+        </div>
     </div>
 
     <script>
@@ -26,7 +31,7 @@
             fetch(`/getData?number=${input.value}`)
                 .then(response => response.text())
                 .then(data => {
-                    answer.innerHTML = `answer: ${data}`;
+                    answer.innerHTML = `Answer: ${data}`;
                 })
                 .catch((error) => console.log(error));
         });
