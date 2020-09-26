@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
 // assignment-1
 app.get('/', (req, res) => {
     res.send('Hello, My Server! :)');
@@ -31,12 +34,31 @@ app.get('/getData', (req, res) => {
     }
 });
 
-//assignment-3
+// assignment-3
 app.use(express.static('public'))
 
+
+// assignment-4
+app.set('view engine', 'pug');
+
+app.get('/myName', (req, res) => {
+    const name = req.cookies.name;
+    if(name) {
+        res.render('index', { name });
+    } else {
+        res.render('login');
+    }
+});
+
+app.get('/trackName', (req, res) => {
+    res.cookie('name', req.query.name);
+    res.redirect('/myName');
+});
+
+app.get('/clearName', (req, res) => {
+    res.clearCookie('name');
+    res.redirect('/myName');
+});
+
+
 app.listen('3000');
-
-
-// req.query.number -> 取得?number="value"的value
-// Number() -> string to number
-// Number.isInteger() -> 判斷是否為整數

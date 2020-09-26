@@ -1,0 +1,12 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Cookie
+    body
+        h1 Welcome!
+        form(action="/trackName" method="GET")
+            label(for="name") Please enter your name: 
+            input(type="text" name="name" id="name")
+            button(type="submit") Submit
