@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;   
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+}
+
+/* 置中容器 */
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* ===== navbar ===== */
+.navbar {
+    background-color: rgb(238,238,238);
+    padding: 5px 20px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.burger-icon {
+    margin-right: 10px;
+}
+
+.burger-icon button img {
+    width: 45px;
+    height: 40px;
+}
+
+.menu-list {
+    display: none;
+}
+
+.menu-list.active {
+    background-color: #fff;
+    -webkit-box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.41);
+    -moz-box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.41);
+    box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.41);
+    padding: 1.2rem;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+}
+
+.menu-list.active .menu-item {
+    margin-bottom: 2rem;
+}
+
+.menu-list.active .close-icon {
+    position: absolute;
+    top: 0;
+    right: 1.5rem;
+    font-size: 2.5rem;
+}
+
+
+
+/* ===== banner ===== */
+.banner {
+    background-color: rgb(201,221,239);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== section ===== */
+.section {
+    text-align: center;
+}
+.section h2 {
+    margin: 30px auto 24px auto;
+}
+
+.boxes-group, #boxes-group--2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#boxes-group--2 {
+    display: none;
+}
+
+.box {
+    background-color: rgb(133,153,171);
+    height: 150px;
+    width: 100%;
+    margin-top: 1em;
+    padding: 5px;
+}
+
+.btn {
+    background-color: rgb(218,238,255);
+    padding: 1em;
+    margin: 1em;
+}
+
+
+/* =======================
+        Media query
+========================== */
+
+/*  螢幕大於500px時套用  */
+@media (min-width: 501px) {
+    .wrapper {
+        width: 95%;
+    }
+
+    .navbar {
+        padding: 5px 25px;
+    }
+
+    .box {
+        width: 45%;
+        margin: 10px;
+        flex-grow: 1;
+    }
+}
+/*  螢幕大於800px時套用  */
+@media (min-width: 801px) {
+    .burger-icon {
+        display: none;
+    }
+    .close-icon {
+        display: none;
+    }
+    .menu-list {
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .logo {
+        padding-left: 5px;
+    }
+
+}
+
+/*  螢幕大於1200px時套用  */
+@media (min-width: 1201px) {
+    .menu-list {
+        width: 30%;
+    }
+}
