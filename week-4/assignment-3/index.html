@@ -15,7 +15,7 @@
     <div id="root"></div>
     <script type="text/babel">
 
-        const Box = ({number}) => {
+        const Box = ({ number }) => {
            return <div className="box">Content Box {number}</div>
         }
 
@@ -92,9 +92,9 @@
             }
             // 開關menu
             toggleMenuOpen = () => {
-                this.setState({
-                    menuIsOpened: !this.state.menuIsOpened
-                });
+                this.setState((currentState) => ({
+                    menuIsOpened: !currentState.menuIsOpened
+                }));
             }
 
             // 改變banner text
